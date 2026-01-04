@@ -4,8 +4,8 @@ int main(){
     int a[10]={0,0,0,0,0,0,0,0,0,0},b=0,choice,ch;
     printf("Please choose your case (1 or 2)\n1- binary to decimal.\n2- decimal to binary.\n");
     while (1){
-        if (scanf("%d",&choice)!=1){
-            printf("error\n");
+        if (scanf("%d",&choice)!=1){ //if the user enters letters (A,a,?...) for example the scan function "that is waiting for a number" will fail.
+            //printf("error\n"); //this is optional to tell you if the function failed.
             while (getchar() != '\n');
             continue;
         } else {
@@ -62,19 +62,12 @@ int main(){
             do{
                 printf("%d",a[ch--]);
             }while (ch>=0);
-            
-            /*for (int i=0; i<10;i++){
-                if(choice!=0){
-                    choice = b /2;
-                    //printf("%d",a[i]);
-                    b = b+ a[i]*pow(2,ch--);
-                } else break;
-            }*/    
             break;   
         default:
             break;
     }
     
     
+
 
 }
