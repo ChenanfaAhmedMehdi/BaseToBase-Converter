@@ -135,15 +135,14 @@ gcc main.c -o main -lm
 | 11           | 3       |
 | --           | --      |
 | --           | --      |
-| 1 and ten 0  | 512     | false due to an Overflow
-                           the last 0 wasn't stored
-                           expected decimal: 1024
-                           this does apply to all
-                           greater numbers.
+| 1 and ten 0  | 512     | false* 
 | -1           | 1       | false.
-                           
 
-
+*due to an Overflow
+the last 0 wasn't stored
+expected decimal: 1024
+this does apply to all
+greater numbers.                         
 
 ## Decimal to Binary
 
